@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Erzincan Kısa Film Festivali</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body class="baseLayout">
+
+    <div class="headerContainer">
+        <div class="headerLogo">
+            <img src="http://satyr.io/150x150" />
+        </div>
+    </div>
+    <div class="mobileNavbar">
+        <nav role="navigation">
+            <div id="menuToggle">
+                <!--
+                A fake / hidden checkbox is used as click reciever,
+                so you can use the :checked selector on it.
+                -->
+                <input type="checkbox" />
+
+                <!--
+                Some spans to act as a hamburger.
+
+                They are acting like a real hamburger,
+                not that McDonalds stuff.
+                -->
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <!--
+                Too bad the menu has to be inside of the button
+                but hey, it's pure CSS magic.
+                -->
+                <ul id="menu">
+                    <li>Anasayfa</li>
+                    <li>Festival</li>
+                    <li>Program</li>
+                    <li>Medya</li>
+                    <li>İletişim</li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="mainNavbar">
+        <div class="mainNavContainer">
+            <div class="navigationMenu">
+                <div class="navItem">
+                    <span>Anasayfa</span>
+                </div>
+                <div class="navItem">
+                    <span>Festival</span>
+                </div>
+                <div class="navItem">
+                    <span>Program</span>
+                </div>
+                <div class="navItem">
+                    <span>Medya</span>
+                </div>
+                <div class="navItem">
+                    <span>İletişim</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mainContainer">
+        @RenderBody()
+        <!-- footer starts-->
+        <!-- Footer -->
+        <footer class="page-footer font-small indigo">
+            <!-- Footer Links -->
+            <div class="container text-center text-md-left">
+                <!-- Grid row -->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-3 mx-auto">
+                        <!-- Links -->
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!">Very long link 1</a>
+                            </li>
+                            <li>
+                                <a href="#!">Very long link 2</a>
+                            </li>
+                            <li>
+                                <a href="#!">Very long link 3</a>
+                            </li>
+                            <li>
+                                <a href="#!">Very long link 4</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Grid column -->
+                    <hr class="clearfix w-100 d-md-none">
+                    <!-- Grid column -->
+                    <div class="col-md-3 mx-auto">
+                        <!-- Links -->
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!">Link 1</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 2</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 4</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Grid column -->
+                    <hr class="clearfix w-100 d-md-none">
+                    <!-- Grid column -->
+                    <div class="col-md-3 mx-auto">
+                        <!-- Links -->
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!">Link 1</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 2</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 4</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Grid column -->
+                    <hr class="clearfix w-100 d-md-none">
+                    <!-- Grid column -->
+                    <div class="col-md-3 mx-auto">
+                        <!-- Links -->
+                        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!">Link 1</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 2</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#!">Link 4</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+            <!-- Footer Links -->
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">
+                © 2020 Copyright:
+                <a href="#"> erzicankisafilmfestivali.com</a>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+        <!-- footer ends-->
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+@RenderSection("Scripts", required: false)
+</html>
