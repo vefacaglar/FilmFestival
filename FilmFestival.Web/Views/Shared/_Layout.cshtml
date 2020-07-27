@@ -5,80 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Erzincan Kısa Film Festivali</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/site.css?v=@(System.Security.Cryptography.RandomNumberGenerator.GetInt32(0,1000000000))" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 <body class="baseLayout">
-    <div class="mobileNavbar">
-        <nav role="navigation">
-            <div id="menuToggle">
-                <!--
+    <div class="contentWrap">
+        <div class="mobileNavbar">
+            <nav role="navigation">
+                <div id="menuToggle">
+                    <!--
                 A fake / hidden checkbox is used as click reciever,
                 so you can use the :checked selector on it.
                 -->
-                <input type="checkbox" />
+                    <input type="checkbox" />
 
-                <!--
+                    <!--
                 Some spans to act as a hamburger.
 
                 They are acting like a real hamburger,
                 not that McDonalds stuff.
                 -->
-                <span></span>
-                <span></span>
-                <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
 
-                <!--
+                    <!--
                 Too bad the menu has to be inside of the button
                 but hey, it's pure CSS magic.
                 -->
-                <ul id="menu">
-                    <li>Anasayfa</li>
-                    <li>Festival</li>
-                    <li>Program</li>
-                    <li>Medya</li>
-                    <li>İletişim</li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-
-    <div class="allHeader">
-        <div class="headerContainer">
-            <div class="headerLogo">
-                <img src="http://satyr.io/150x150" />
-            </div>
+                    <ul id="menu">
+                        <li><a href="/">Ana Sayfa</a></li>
+                        <li><a href="/festival">Festival</a></li>
+                        <li><a href="/program">Program</a></li>
+                        <li><a href="/medya">Medya</a></li>
+                        <li><a href="/iletisim">İletişim</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
 
-        <div class="mainNavbar">
-            <div class="mainNavContainer">
-                <div class="navigationMenu">
-                    <div class="navItem">
-                        <span>ANA SAYFA</span>
-                    </div>
-                    <div class="navItem">
-                        <span>FESTİVAL</span>
-                    </div>
-                    <div class="navItem">
-                        <span>PROGRAM</span>
-                    </div>
-                    <div class="navItem">
-                        <span>MEDYA</span>
-                    </div>
-                    <div class="navItem">
-                        <span>İLETİŞİM</span>
+        <div class="allHeader">
+            <div class="headerContainer">
+                <div class="headerLogo">
+                    <img src="~/img/movieLogo.png" />
+                </div>
+            </div>
+
+            <div class="mainNavbar">
+                <div class="mainNavContainer">
+                    <div class="navigationMenu">
+                        <div class="navItem">
+                            <span><a href="/">ANA SAYFA</a></span>
+                        </div>
+                        <div class="navItem">
+                            <span><a href="/festival">FESTİVAL</a></span>
+                        </div>
+                        <div class="navItem">
+                            <span><a href="/program">PROGRAM</a></span>
+                        </div>
+                        <div class="navItem">
+                            <span><a href="/medya">MEDYA</a></span>
+                        </div>
+                        <div class="navItem">
+                            <span><a href="/iletisim">İLETİŞİM</a></span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="mainContainer">
+            @RenderBody()
+            <!-- footer starts-->
+            <!-- Footer -->
+            <!-- Footer -->
+            <!-- footer ends-->
+        </div>
     </div>
-
-
-    <div class="mainContainer">
-        @RenderBody()
-        <!-- footer starts-->
-        <!-- Footer -->
-        <footer class="page-footer font-small indigo">
+    <footer class="page-footer font-small indigo">
+        <div class="footerInside">
             <!-- Footer Links -->
             <div class="container text-center text-md-left">
                 <!-- Grid row -->
@@ -176,11 +180,8 @@
                 <a href="#"> erzicankisafilmfestivali.com</a>
             </div>
             <!-- Copyright -->
-
-        </footer>
-        <!-- Footer -->
-        <!-- footer ends-->
-    </div>
+        </div>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>

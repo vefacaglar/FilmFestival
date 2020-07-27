@@ -23,6 +23,30 @@ namespace FilmFestival.Web.Controllers
             return View();
         }
 
+        [HttpGet("festival")]
+        public IActionResult Festival()
+        {
+            return View();
+        }
+
+        [HttpGet("program")]
+        public IActionResult Program()
+        {
+            return View();
+        }
+
+        [HttpGet("medya")]
+        public IActionResult Media()
+        {
+            return View();
+        }
+
+        [HttpGet("iletisim")]
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
